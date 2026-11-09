@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Crear entorno e instalar dependencias",
+      "type": "shell",
+      "command": "python -m venv .venv && ${command:python.interpreterPath} -m pip install -r requirements-dev.txt",
+      "windows": {
+        "command": "python -m venv .venv; .venv\\Scripts\\python -m pip install -r requirements-dev.txt"
+      },
+      "osx": {
+        "command": "python3 -m venv .venv && .venv/bin/python -m pip install -r requirements-dev.txt"
+      },
+      "linux": {
+        "command": "python3 -m venv .venv && .venv/bin/python -m pip install -r requirements-dev.txt"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Correr tablero",
+      "type": "shell",
+      "command": "${command:python.interpreterPath} -m streamlit run app.py",
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "Correr pruebas",
+      "type": "shell",
+      "command": "${command:python.interpreterPath} -m pytest",
+      "problemMatcher": [],
+      "group": { "kind": "test", "isDefault": true }
+    }
+  ]
+}

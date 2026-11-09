@@ -1,0 +1,8 @@
+streamlit>=1.66   # versión con la que se probó el tablero
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.5
+plotly>=5.24
+tzdata>=2024.1   # zona horaria America/Mexico_City también en Windows
+# Opcional, solo para iniciar sesión con OIDC (st.login):
+# streamlit[auth]

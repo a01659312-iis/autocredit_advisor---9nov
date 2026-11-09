@@ -1,0 +1,15 @@
+# Datos y secretos: nunca al repositorio (Bloque F)
+data/*.db
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+
+# Editor / SO
+.DS_Store
+Thumbs.db

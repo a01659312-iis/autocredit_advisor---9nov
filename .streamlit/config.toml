@@ -1,0 +1,40 @@
+# Configuración de Streamlit para AutoCredit Advisor
+
+[client]
+# Exposición (Bloque F): no mostrar tracebacks con rutas o datos en el navegador.
+showErrorDetails = "none"
+# Oculta opciones de desarrollador (deploy, clear cache) a las personas usuarias.
+toolbarMode = "viewer"
+# Sin descarga/copia nativa de tablas: la única descarga es la propuesta agregada de P3.
+disableDataExport = true
+# La navegación la construye app.py según el rol.
+showSidebarNavigation = true
+
+[server]
+headless = true
+runOnSave = true
+
+[browser]
+gatherUsageStats = false
+
+# Tema claro y oscuro: la persona elige en el menú (por defecto sigue su sistema).
+[theme]
+baseRadius = "medium"
+
+[theme.light]
+primaryColor = "#0f8a4f"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f4f5f2"
+textColor = "#0b0b0b"
+
+[theme.light.sidebar]
+backgroundColor = "#f4f5f2"
+
+[theme.dark]
+primaryColor = "#3ddc84"
+backgroundColor = "#0f1110"
+secondaryBackgroundColor = "#1a1c1b"
+textColor = "#f0efec"
+
+[theme.dark.sidebar]
+backgroundColor = "#161817"
